@@ -18,11 +18,11 @@ def mult(u,v):
 		return u*v
 	else:
 		s = n / 2
-		w = u / (10**n)
-		x = u % (10**n)
-		y = v / (10**n)
-		z = v % (10**n)
-		return (mult(w,y)*(10**(2*n))) + (mult(w,z)+mult(x,y))*(10**n) + mult(x,z)
+		w = u / (10**s)
+		x = u % (10**s)
+		y = v / (10**s)
+		z = v % (10**s)
+		return (mult(w,y)*(10**(2*s))) + (mult(w,z)+mult(x,y))*(10**s) + mult(x,z)
 
 print mult(100222,4222200)
 
