@@ -3,14 +3,14 @@ from time import time
 import random
 
 A = []
-TAM = 5
+TAM = 2000000
 
 def llenaArreglo(p):
 	for i in range(TAM):
-		p.append(random.randint(1, 500))
+		p.append(random.randint(1, 500000000))
 
 def writeFile(fTime):
-	archivo = open("Quick.txt", "r+")
+	archivo = open("datos.txt", "r+")
 	contenido = archivo.read()
 	final_de_archivo = archivo.tell()	 
 	archivo.write(fTime+" "+str(TAM)+"\n")
@@ -34,11 +34,10 @@ def Quick(a, prim,ult):
 		Quick(a,pos+1,ult)
 
 llenaArreglo(A)
-print A
 init_time = time()
 Quick(A,0,len(A)-1)
 final_time = time()
 e_time = final_time - init_time
 str_time = str("%.20f" % e_time)
 writeFile(str_time)
-print A
+print str_time

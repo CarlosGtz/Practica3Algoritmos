@@ -10,7 +10,7 @@ def llenaArreglo(p):
 		p.append(random.randint(1, 500000))
 
 def writeFile(fTime):
-	archivo = open("Max.txt", "r+")
+	archivo = open("datos.txt", "r+")
 	contenido = archivo.read()
 	final_de_archivo = archivo.tell()	 
 	archivo.write(fTime+" "+str(TAM)+"\n")

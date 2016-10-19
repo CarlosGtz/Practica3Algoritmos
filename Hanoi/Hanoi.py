@@ -5,14 +5,14 @@ TAM = int(input("FNumero de discos>>"))
 	
 def Hanoi(n, origen, auxiliar, destino):
 	if n ==1 :
-		print ("mover disco de " + str(origen) + " a " + str(destino))
+		print (str(origen) + " -> " + str(destino))
 	else:
 		Hanoi(n-1, origen, destino, auxiliar)
-		print ("mover disco de " + str(origen) + " a " + str(destino))
+		print (str(origen) + " -> " + str(destino))
 		Hanoi(n-1, auxiliar, origen, destino)
 
 def writeFile(fTime):
-	archivo = open("Hanoi.txt", "r+")
+	archivo = open("datos.txt", "r+")
 	contenido = archivo.read()
 	final_de_archivo = archivo.tell()	 
 	archivo.write(fTime+" "+str(TAM)+"\n")
